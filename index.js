@@ -8,12 +8,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // document.querySelector('#date-picker').value = datePattern;
     // console.log()
     // getData ()
+    
 });
 
 
 
 // console.log(document.querySelector('#date-picker'))
 let datePicker = document.querySelector('#date-picker')
+
 
 // console.log(datePicker.value);
 //console.log(datePicker.value); => 2021-06-14 => is the format we want to use
@@ -61,3 +63,18 @@ function displayData (data) {
     // photoTwoDate.textContent = data[1].date
     // photoThreeDate.textContent = data[2].date
 }
+
+const textIn = document.getElementById("commentBox");
+const textOut = document.getElementById('comments');
+const submitBt = document.querySelector('#commentForm');
+
+const submitBtClick = (e) => {
+    e.preventDefault();
+    const text = textIn.value 
+    const newLi = document.createElement('Li'); 
+    newLi.innerHTML = text; 
+    textOut.appendChild(newLi);
+    console.log("wht f");
+}
+
+submitBt.addEventListener("click", submitBtClick);
