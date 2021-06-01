@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="./index.js"></script> 
+        <title>3 Days at a Time</title>
+    </head>
+
+    <body>
+        <div id="h1Container">
+            <h1>3 DAYS AT A TIME</h1>
+        </div>
+
+        <div id="selectionContainer">
+            <h4 id="description">We feature the NASA photo of the day, 3 days at a time!</h4>
+            <p id="select">select your 3 days starting from</p>
+            <input type = "date" name="date" id="date-picker" >
+        </div>
+        
+        <div id="photoContainer">
+            <div id="photoOneCard" class="photocard">
+                <img id="photoOneImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AS17-137-20979_1024.jpg" alt="2021-05-29">
+                <h5 id="photoOneTitle" class="title">Lunar Dust and Duct Tape</h5>
+                <p id="photoOneDate" class="date">2021-05-29</p>
+                <button class="like">Like ❤ </button>
+            </div>
+            <div id="photoTwoCard" class="photocard">
+                <img id="photoTwoImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AuroraClouds_Boffelli_1080.jpg" alt="2021-05-30">
+                <h5 id="photoTwoTitle" class="title">Aurora over Clouds</h5>
+                <p id="photoTwoDate" class="date">2021-05-30</p>
+                <button class="like">Like ❤ </button>
+            </div>
+            <div id="photoThreeCard" class="photocard">
+                <img id="photoThreeImg" class="url" src="https://apod.nasa.gov/apod/image/2105/Mimas_Cassini_960.jpg" alt="2021-05-31">
+                <h5 id="photoThreeTitle" class="title">Mimas: Small Moon with a Big Crater</h5>
+                <p id="photoThreeDate" class="date">2021-05-31</p>
+                <button class="like">Like ❤ </button>
+            </div>
+        </div>
+
+        <div id="commentFormContainer">
+            <h3 id="LeaveComment">Leave a Comment</h3>
+            <form action="">
+                <textarea id="commentBox" name="commentBox" rows="5" cols="150">Share your Thoughts here...</textarea>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="commentContainer">
+            <ul id="comments">
+                <li class="comment">Love it!</li>
+                <li class="comment">The photos are AMAZING!!!!</li>
+                <li class="comment">NASA NASA NASA!</li>
+            </ul>
+        </div>
+
+    </body>
+</html> 
