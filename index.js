@@ -1,32 +1,42 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    // console.log('DOM fully loaded and parsed');
-    // var date = new Date();
-    // var year = date.getFullYear();
-    // var month = date.getMonth()+1;
-    // var todayDate = String(date.getDate()).padStart(2,'0');
-    // var datePattern = year + '-' + month + '-' + todayDate;
-    // document.querySelector('#date-picker').value = datePattern;
-    // console.log()
-    // getData ()
+    console.log('DOM fully loaded and parsed');
 });
 
+// how to get the next date https://flaviocopes.com/how-to-get-tomorrow-date-javascript/#:~:text=getDate()%20%2B%201%20%2C%20you',year%2C%20if%20it's%2031%20December.&text=tomorrow%20is%20now%20a%20Date%20object%20representing%20tomorrow's%20date.
 
 
 // console.log(document.querySelector('#date-picker'))
 let datePicker = document.querySelector('#date-picker')
+// datePicker.datePicker('getDate')
 
 // console.log(datePicker.value);
 //console.log(datePicker.value); => 2021-06-14 => is the format we want to use
 
 datePicker.addEventListener('change', (e) =>{
-    console.log(datePicker.value)    
-    getData ()
+    // console.log(typeof datePicker.value) => string
+    const startDate = new Date(`${datePicker.value}`); // date type 
+    const endDate = new Date(startDate); //date type
+    endDate.setDate(endDate.getDate() + 3);
+    const endDateYear = endDate.getFullYear(); // number type
+    const endDateMonth = endDate.getMonth() +1; 
+    const endDateDate = endDate.getDate();
+
+    // console.log(
+    //     'startDate:', typeof startDate,
+    //     'endDateYear', endDateYear,
+    //     'endDateMonth',endDateMonth,
+    //     'endDateDate',endDateDate,
+    //     'endDate',endDate
+    // );
+    getData (endDateYear,endDateMonth,endDateDate) 
 })
 
 const apiKey = 'SutcuqvSUtfX12wwW5bWhHEd9tnMxItrzcSbLvYm'
 
-function getData () {
-    return fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${datePicker.value}`)
+function getData (endDateYear,endDateMonth,endDateDate) {
+    // fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${datePicker.value}`)
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=${datePicker.value}&end_date=${endDateYear}-${endDateMonth}-${endDateDate}`)
+    .then(res => res.json())
     .then((data) => {
         console.log(data)
         displayData (data)
@@ -35,29 +45,56 @@ function getData () {
 }
 
 function displayData (data) {
-    //grab and change the content of the elements
     // const photeOneImg = document.querySelector('#photoContainer').firstChild.nextSibling.firstElementChild
     const photeOneImg = document.querySelector('#photoOneImg')
-    // const photeTwoImg = document.querySelector('#photeTwoImg') 
-    // const photeThreeImg = document.querySelector('#photeThreeImg') 
+    const photeTwoImg = document.querySelector('#photoTwoImg') 
+    const photeThreeImg = document.querySelector('#photoThreeImg') 
 
     const photoOneTitle = document.querySelector('#photoOneTitle') 
-    // const photoTwoTitle = document.querySelector('#photoTwoTitle') 
-    // const photoThreeTitle = document.querySelector('#photoThreeTitle') 
+    const photoTwoTitle = document.querySelector('#photoTwoTitle') 
+    const photoThreeTitle = document.querySelector('#photoThreeTitle') 
 
     const photoOneDate = document.querySelector('#photoOneDate') 
-    // const photoTwoDate = document.querySelector('#photoTwoDate') 
-    // const photoThreeDate = document.querySelector('#photoThreeDate') 
+    const photoTwoDate = document.querySelector('#photoTwoDate') 
+    const photoThreeDate = document.querySelector('#photoThreeDate') 
 
-    photeOneImg.src = data.url
-    // photeTwoImg.src = data[1].url
-    // photeThreeImg .src = data[2].url
+    photeOneImg.src = data[0].url
+    photeTwoImg.src = data[1].url
+    photeThreeImg .src = data[2].url
 
-    photoOneTitle.textContent = data.title
-    // photoTwoTitle.textContent = data[1].title
-    // photoThreeTitle.textContent = data[2].title
+    photoOneTitle.textContent = data[0].title
+    photoTwoTitle.textContent = data[1].title
+    photoThreeTitle.textContent = data[2].title
 
-    photoOneDate.textContent = data.date
-    // photoTwoDate.textContent = data[1].date
-    // photoThreeDate.textContent = data[2].date
+    photoOneDate.textContent = data[0].date
+    photoTwoDate.textContent = data[1].date
+    photoThreeDate.textContent = data[2].date
 }
+
+
+
+
+//like button event listener
+const likeBtns = document.querySelectorAll('.like');
+for (likeBtn of likeBtns) {
+    likeBtn.addEventListener('click', (e) => {
+    if (e.target.textContent === 'Like ♡') {
+        e.target.textContent = '❤️';
+        e.target.style.color = 'red';
+    } else {
+        e.target.textContent = 'Like ♡'
+        e.target.style.color = '';
+    } 
+    })
+}
+
+//comment form event listener
+// document.querySelector('#comments').innerHTML = '';
+document.querySelector('#commentForm').addEventListener('submit',(e) => {
+    e.preventDefault();
+    let commentLi = document.createElement('li')
+    commentLi.textContent =  document.querySelector('#commentBox').value;
+    document.querySelector('#comments').append(commentLi);
+
+
+})

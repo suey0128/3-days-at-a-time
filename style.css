@@ -1,0 +1,95 @@
+body{
+    /* Photo by Alex Andrews from Pexels */
+    background-image: url(https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    
+ }
+ #selectionContainer {
+    text-align: center;
+    margin-bottom: 10px;
+ }
+ h1{
+    font-family: 'Bookman Old Style ', serif;
+    color: rgba(184, 200, 246, 0.555);
+    text-align: center;
+    font-size: 300%;
+   
+ }
+ h4{
+    font-family: 'Bookman Old Style ', serif;
+    color: rgb(30, 33, 41);   
+    font-size: 200%;
+    box-shadow: 10px 5px 5px rgba(68, 0, 255, 0.63);
+    
+    padding: 10px;
+    padding-bottom: 10px;
+    background: rgba(184, 200, 246, 0.555);
+ }
+p {
+    
+    font-family: 'Bookman Old Style ', serif;
+    color: rgba(184, 200, 246, 0.555);    
+    font-size: 150%;
+    
+ }
+  
+ .photocard h5, p {
+    
+    font-family: 'Bookman Old Style ', serif;
+    color: rgba(184, 200, 246, 0.555);
+    text-align:center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 150%;
+     
+ }
+ img {
+    max-width: 40%;
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  button{
+    margin-left: 850px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 150%;
+    color: black;
+    border: 2px solid #824caf; 
+
+  }
+ li {
+    
+    font-family: 'Bookman Old Style ', serif;
+    color:  rgba(23, 8, 66, 0.774);
+    text-align:left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 125%;
+   
+     
+  }
+  #commentContainer{
+    text-align:center;
+    background-color:rgba(184, 200, 246, 0.753); 
+    border: 4px solid rgb(255, 255, 255);
+  }
+  #commentFormContainer{
+    text-align:center;
+   
+    
+  }
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
