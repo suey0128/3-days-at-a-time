@@ -50,6 +50,15 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+
+  iframe {
+    max-width: 40%;
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   button{
     margin-left: 850px;
@@ -81,15 +90,3 @@ p {
    
     
   }
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

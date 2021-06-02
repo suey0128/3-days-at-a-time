@@ -45,10 +45,11 @@ function getData (endDateYear,endDateMonth,endDateDate) {
 }
 
 function displayData (data) {
-    // const photeOneImg = document.querySelector('#photoContainer').firstChild.nextSibling.firstElementChild
-    const photeOneImg = document.querySelector('#photoOneImg')
-    const photeTwoImg = document.querySelector('#photoTwoImg') 
-    const photeThreeImg = document.querySelector('#photoThreeImg') 
+
+    const photoOneMediaWrapper = document.querySelector('#photoOneMediaWrapper')
+    const photeTwoMediaWrapper = document.querySelector('#photoTwoMediaWrapper') 
+    const photeThreeMediaWrapper = document.querySelector('#photoThreeMediaWrapper') 
+
 
     const photoOneTitle = document.querySelector('#photoOneTitle') 
     const photoTwoTitle = document.querySelector('#photoTwoTitle') 
@@ -58,9 +59,41 @@ function displayData (data) {
     const photoTwoDate = document.querySelector('#photoTwoDate') 
     const photoThreeDate = document.querySelector('#photoThreeDate') 
 
-    photeOneImg.src = data[0].url
-    photeTwoImg.src = data[1].url
-    photeThreeImg .src = data[2].url
+
+    photoOneMediaWrapper.innerHTML = ''
+    photeTwoMediaWrapper.innerHTML = ''
+    photeThreeMediaWrapper.innerHTML = ''
+
+    if (data[0].media_type === 'image') {
+        const photeOneImg = document.createElement('img')
+        photeOneImg.src = data[0].url
+        photoOneMediaWrapper.append(photeOneImg)
+    } else {
+        const photeOneVideo = document.createElement('iframe')
+        photeOneVideo.src = data[0].url
+        photoOneMediaWrapper.append(photeOneVideo)
+    }
+
+    if (data[1].media_type === 'image') {
+        const photeTwoImg = document.createElement('img')
+        photeTwoImg.src = data[1].url
+        photoTwoMediaWrapper.append(photeTwoImg)
+    } else {
+        const photeTwoVideo = document.createElement('iframe')
+        photeTwoVideo.src = data[1].url
+        photoTwoMediaWrapper.append(photeTwoVideo)
+    }
+
+    if (data[2].media_type === 'image') {
+        const photeThreeImg = document.createElement('img')
+        photeThreeImg.src = data[2].url
+        photoThreeMediaWrapper.append(photeThreeImg)
+    } else {
+        const photeThreeVideo = document.createElement('iframe')
+        photeThreeVideo.src = data[2].url
+        photoThreeMediaWrapper.append(photeThreeVideo)
+    }
+
 
     photoOneTitle.textContent = data[0].title
     photoTwoTitle.textContent = data[1].title
