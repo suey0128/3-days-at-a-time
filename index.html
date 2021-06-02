@@ -15,37 +15,64 @@
             <h4 id="description">We feature the NASA photo of the day, 3 days at a time!</h4>
             <p id="select">select your 3 days starting from</p>
             <input type = "date" name="date" id="date-picker" >
+            <button id="random">Can't Decide</button>
         </div>
         
         <div id="photoContainer">
             <div id="photoOneCard" class="photocard">
-                <div id="photoOneMediaWrapper" class="photoMediaWrapper">
-                    <img id="photoOneImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AS17-137-20979_1024.jpg" alt="2021-05-29">
-                    <!-- <iframe id="photoOneVideo" class="url" src="" frameborder="0"></iframe> -->
+                <lazyMsgWrapper id="lazyMsgWrapperOne" class="lazyMsgWrapper">
+                    <h2 id="lazyMsgOne" >Opps! It seems like NASA was being lazy on the 1st day :/</h2>
+                </lazyMsgWrapper>
+                <div id="photoOneInfoContainer">
+                    <div id="photoOneMediaWrapper" class="photoMediaWrapper">
+                        <img id="photoOneImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AS17-137-20979_1024.jpg" alt="2021-05-29">
+                        <!-- <iframe id="photoOneVideo" class="url" src="" frameborder="0"></iframe> -->
+                    </div>
+                    <div class="likeContainer">
+                        <button class="like">Like ♡</button>
+                        <p class="likeP"></p>
+                    </div>
+                    <h5 id="photoOneTitle" class="title">Lunar Dust and Duct Tape</h5>
+                    <p id="photoOneDate" class="date">2021-05-29</p>
                 </div>
-                <h5 id="photoOneTitle" class="title">Lunar Dust and Duct Tape</h5>
-                <p id="photoOneDate" class="date">2021-05-29</p>
-                <button class="like">Like ♡</button>
             </div>
+
             <div id="photoTwoCard" class="photocard">
-                <div id="photoTwoMediaWrapper" class="photoMediaWrapper">
-                    <img id="photoTwoImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AuroraClouds_Boffelli_1080.jpg" alt="2021-05-30">
-                    <!-- <iframe id="photoTwoVideo" class="url" src="" frameborder="0"></iframe> -->
+                <lazyMsgWrapper  id="lazyMsgWrapperTwo" class="lazyMsgWrapper">
+                    <h2 id="lazyMsgTwo" >Opps! It seems like NASA was being lazy on the 2nd day :/</h2>
+                </lazyMsgWrapper>
+                <div id="photoTwoInfoContainer">
+                    <div id="photoTwoMediaWrapper" class="photoMediaWrapper">
+                        <img id="photoTwoImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AuroraClouds_Boffelli_1080.jpg" alt="2021-05-30">
+                        <!-- <iframe id="photoTwoVideo" class="url" src="" frameborder="0"></iframe> -->
+                    </div>
+                    <div class="likeContainer">
+                        <button class="like">Like ♡</button>
+                        <p class="likeP"></p>
+                    </div>
+                    <h5 id="photoTwoTitle" class="title">Aurora over Clouds</h5>
+                    <p id="photoTwoDate" class="date">2021-05-30</p>
                 </div>
-                <h5 id="photoTwoTitle" class="title">Aurora over Clouds</h5>
-                <p id="photoTwoDate" class="date">2021-05-30</p>
-                <button class="like">Like ♡ </button>
             </div>
+
             <div id="photoThreeCard" class="photocard">
-                <div id="photoThreeMediaWrapper" class="photoMediaWrapper">
-                    <img id="photoThreeImg" class="url" src="https://apod.nasa.gov/apod/image/2105/Mimas_Cassini_960.jpg" alt="2021-05-31">
-                    <!-- <iframe id="photoThreeVideo" class="url" src="" frameborder="0"></iframe> -->
+                <lazyMsgWrapper id="lazyMsgWrapperThree" class="lazyMsgWrapper">
+                    <h2 id="lazyMsgThree" >Opps! It seems like NASA was being lazy on the 3rd day :/</h2>
+                </lazyMsgWrapper>
+                <div id="photoThreeInfoContainer">
+                    <div id="photoThreeMediaWrapper" class="photoMediaWrapper">
+                        <img id="photoThreeImg" class="url" src="https://apod.nasa.gov/apod/image/2105/Mimas_Cassini_960.jpg" alt="2021-05-31">
+                        <!-- <iframe id="photoTwoVideo" class="url" src="" frameborder="0"></iframe> -->
+                    </div>
+                    <div class="likeContainer">
+                        <button class="like">Like ♡</button>
+                        <p class="likeP"></p>
+                    </div>
+                    <h5 id="photoThreeTitle" class="title">Mimas: Small Moon with a Big Crater</h5>
+                    <p id="photoThreeDate" class="date">2021-05-31</p>
                 </div>
-                <h5 id="photoThreeTitle" class="title">Mimas: Small Moon with a Big Crater</h5>
-                <p id="photoThreeDate" class="date">2021-05-31</p>
-                <button class="like">Like ♡</button>
             </div>
-        </div>
+
 
         <div id="commentFormContainer">
             <h3 id="LeaveComment">Leave a Comment</h3>
