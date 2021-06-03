@@ -2,44 +2,77 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
     background-color: black;
     color:white;
 }
-body {
-   
-}
 
 #h1Container {
-    height: 150px;
+    height: 170px;
     display: flex;
     flex-direction: column;    /* make the block verditally lie with each other */
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
-    top: 0;
-    z-index: 999;
+    /* top: 0;
+    z-index: 999; */
 }
 
 h1 {
-    padding:20px
+    padding:20px;
+    color: white;
 }   
+
+#h1Container h4 {
+    font-size: larger;
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #c9ffbf, #ffafbd);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
 
 #selectionContainer {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px
+}
+
+#datePickerContainer {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+
+#select {
+    font-size: 20px;
+}
+
 #date-picker {
-    background: #833ab4;
-    padding: 10px 10px;
+    margin-left:8px;
+    background: white;
+    color: black;
+    padding: 0px 10px;
     outline: none;
     border: none;
+}
+
+#date-picker:hover {
+    cursor: pointer;
+}
+
+#randomBtnWrapper {
+    position:absolute;
+    right:50px
 }
 
 #random {
@@ -47,8 +80,8 @@ h1 {
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #833ab4;
-    color: #fff;
+    background:linear-gradient(to right, #c9ffbf, #ffafbd);
+    color: black;
     padding: 10px 20px;
 }
 
@@ -98,13 +131,11 @@ h1 {
     transform: scale(1.5);
     top:50%;
     left:50%;
-    margin-left:-50px;
-    margin-top:-50px;
 
-    -moz-transition:all 2s;
-    -webkit-transition:all 2s;
-    -o-transition:all 2s;
-    transition:all 2s;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
 }
 
 #photeOneImg:hover {
@@ -114,10 +145,10 @@ h1 {
     margin-left:50px;
     margin-top:-50px;
 
-    -moz-transition:all 2s;
-    -webkit-transition:all 2s;
-    -o-transition:all 2s;
-    transition:all 2s;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
 }
 
 #photeOneVideo:hover {
@@ -127,10 +158,36 @@ h1 {
     margin-left:50px;
     margin-top:-50px;
 
-    -moz-transition:all 2s;
-    -webkit-transition:all 2s;
-    -o-transition:all 2s;
-    transition:all 2s;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+
+#photeThreeImg:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+    margin-top:-50px;
+
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+
+#photeThreeVideo:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+    margin-top:-50px;
+
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
 }
 
 
@@ -143,6 +200,20 @@ h1 {
     background-color: white;
 }
 
+.like {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background:linear-gradient(to right, #c9ffbf, #ffafbd);
+    color: #fff;
+    padding: 2px 15px;
+}
+
+
+
+.likeContainer p {
+    font-size: 12px;
+}
 .photoInfoContainer h5{
     padding: 5px 30px;
     font-size: 14px;
@@ -156,6 +227,14 @@ h1 {
     color:black;
 }
 
+.lazyMsgWrapper h2 {
+    padding: 20px;
+    background-color: white;
+    color:black;
+}
+
+
+
 #commentFormContainer {
     padding:60px
 }
@@ -168,8 +247,8 @@ h1 {
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #833ab4;
-    color: #fff;
+    background: linear-gradient(to right, #c9ffbf, #ffafbd);
+    color: black;
     padding: 10px 20px;
 }
 
@@ -178,14 +257,30 @@ h1 {
 }
 
 #commentContainer {
-    padding: 30px;
-    background-color: wheat;
+    padding: 30px 30px 50px 30px;
+    background: linear-gradient(to right, #c9ffbf, #ffafbd);
 
 }
 
+#LeaveComment {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #c9ffbf, #ffafbd);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+#comments {
+    color: grey;
+    background:linear-gradient(to right, #c9ffbf, #ffafbd);
+}
 
 .comment { 
     padding: 5px 30px;
     list-style: none;
-    background-color: wheat;
+    color: grey;
+    background:linear-gradient(to right, #c9ffbf, #ffafbd);
 }
+

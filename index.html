@@ -2,7 +2,11 @@
 <html lang="en">
     <head>
         <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script defer src="./index.js"></script> 
         <title>3 Days at a Time</title>
     </head>
@@ -14,9 +18,13 @@
         </div>
 
         <div id="selectionContainer">
-            <p id="select">select your 3 days starting from</p>
-            <input type = "date" name="date" id="date-picker" >
-            <button id="random">Can't Decide</button>
+            <div id="datePickerContainer">
+                <p id="select">select your 3 days starting from</p>
+                <input type = "date" name="date" id="date-picker" >
+            </div>
+            <div id="randomBtnWrapper">
+                <button id="random">Can't Decide</button>
+            </div>
         </div>
 
 
@@ -27,7 +35,7 @@
                 </lazyMsgWrapper>
                 <div id="photoOneInfoContainer" class="photoInfoContainer">
                     <div id="photoOneMediaWrapper" class="photoMediaWrapper">
-                        <img id="photoOneImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AS17-137-20979_1024.jpg" alt="2021-05-29">
+                        <img id="photoOneImg" class="url" src="" alt="">
                         <!-- <iframe id="photoOneVideo" class="url" src="" frameborder="0"></iframe> -->
                     </div>
                     <div class="likeContainer">
@@ -45,7 +53,7 @@
                 </lazyMsgWrapper>
                 <div id="photoTwoInfoContainer" class="photoInfoContainer">
                     <div id="photoTwoMediaWrapper" class="photoMediaWrapper">
-                        <img id="photoTwoImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AuroraClouds_Boffelli_1080.jpg" alt="2021-05-30">
+                        <img id="photoTwoImg" class="url" src="" alt="">
                         <!-- <iframe id="photoTwoVideo" class="url" src="" frameborder="0"></iframe> -->
                     </div>
                     <div class="likeContainer">
@@ -63,7 +71,7 @@
                 </lazyMsgWrapper>
                 <div id="photoThreeInfoContainer" class="photoInfoContainer">
                     <div id="photoThreeMediaWrapper" class="photoMediaWrapper">
-                        <img id="photoThreeImg" class="url" src="https://apod.nasa.gov/apod/image/2105/Mimas_Cassini_960.jpg" alt="2021-05-31">
+                        <img id="photoThreeImg" class="url" src="" alt="">
                         <!-- <iframe id="photoTwoVideo" class="url" src="" frameborder="0"></iframe> -->
                     </div>
                     <div class="likeContainer">
@@ -93,6 +101,7 @@
                 <li class="comment">NASA NASA NASA!</li>
             </ul>
         </div>
+
 
     </body>
 </html> 

@@ -4,15 +4,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector('#lazyMsgOne').style.display = 'none'
     document.querySelector('#lazyMsgTwo').style.display = 'none'
     document.querySelector('#lazyMsgThree').style.display = 'none'
-    
-
-
-
 });
 
 // how to get the next date https://flaviocopes.com/how-to-get-tomorrow-date-javascript/#:~:text=getDate()%20%2B%201%20%2C%20you',year%2C%20if%20it's%2031%20December.&text=tomorrow%20is%20now%20a%20Date%20object%20representing%20tomorrow's%20date.
 
 let datePicker = document.querySelector('#date-picker')
+// datePicker.min= "1995-6-16"
+// datePicker.min= `${endDateYear}-${endDateMonth}-${endDateDate}`
+// $(document).ready(function() {
+//     console.log(datePicker)
+//     datePicker.datePicker()
+    // .datePicker({
+    // minDate: new Date(1995, 6,16),
+    // maxDate: -2
+// })
+// });
 
 
 // set timepicker min and max date
@@ -29,23 +35,7 @@ function setDateMinMax () {
 
     datePicker.setAttribute('min','1995-06-16')
     datePicker.setAttribute('max',`${maxDateYear}-${maxDateMonth}-${maxDateDate}`)
-
-    initPage (maxDateYear,maxDateMonth,maxDateDate)
-
 }
-
-const apiKey = 'SutcuqvSUtfX12wwW5bWhHEd9tnMxItrzcSbLvYm'
-
-function initPage (maxDateYear,maxDateMonth,maxDateDate) {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=${maxDateYear}-${maxDateMonth}-${maxDateDate}`)
-    .then(res => res.json())
-    .then((data) => {
-        console.log(data)
-        displayData (data)
-    })
-    .catch(error => console.error('Error:', error))
-}
-
 
 datePicker.addEventListener('change', (e) =>{
     const startDate = new Date(`${datePicker.value}`); // date type 
@@ -55,7 +45,11 @@ datePicker.addEventListener('change', (e) =>{
     const endDateMonth = endDate.getMonth() +1; 
     const endDateDate = endDate.getDate();
     getData (endDateYear,endDateMonth,endDateDate) 
+
+    
 })
+
+const apiKey = 'SutcuqvSUtfX12wwW5bWhHEd9tnMxItrzcSbLvYm'
 
 function getData (endDateYear,endDateMonth,endDateDate) {
     // fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${datePicker.value}`)
@@ -161,6 +155,23 @@ function displayData (data) {
     }
  
 }
+
+
+
+
+// //like button event listener (red heart)
+// const likeBtns = document.querySelectorAll('.like');
+// for (likeBtn of likeBtns) {
+//     likeBtn.addEventListener('click', (e) => {
+//     if (e.target.textContent === 'Like ♡') {
+//         e.target.textContent = '❤️';
+//         e.target.style.color = 'red';
+//     } else {
+//         e.target.textContent = 'Like ♡'
+//         e.target.style.color = '';
+//     } 
+//     })
+// }
 
 
 
