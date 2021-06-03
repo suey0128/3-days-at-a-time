@@ -93,10 +93,14 @@ function displayData (data) {
         document.querySelector('#lazyMsgOne').style.display = 'none'
         if (data[0].media_type === 'image') {
             const photeOneImg = document.createElement('img')
+            photeOneImg.className = 'url'
+            photeOneImg.id = 'photeOneImg'
             photeOneImg.src = data[0].url
             photoOneMediaWrapper.append(photeOneImg)
         } else {
             const photeOneVideo = document.createElement('iframe')
+            photeOneVideo.className = 'url'
+            photeOneVideo.id = 'photeOneVideo'
             photeOneVideo.src = data[0].url
             photoOneMediaWrapper.append(photeOneVideo)
         }
@@ -114,10 +118,12 @@ function displayData (data) {
         console.log(document.querySelector('#lazyMsgTwo'))
         if (data[1].media_type === 'image') {
             const photeTwoImg = document.createElement('img')
+            photeTwoImg.className = 'url'
             photeTwoImg.src = data[1].url
             photoTwoMediaWrapper.append(photeTwoImg)
         } else {
             const photeTwoVideo = document.createElement('iframe')
+            photeTwoVideo.className = 'url'
             photeTwoVideo.src = data[1].url
             photoTwoMediaWrapper.append(photeTwoVideo)
         }
@@ -133,10 +139,12 @@ function displayData (data) {
         document.querySelector('#lazyMsgThree').style.display = 'none'
         if (data[2].media_type === 'image') {
             const photeThreeImg = document.createElement('img')
+            photeThreeImg.className = 'url'
             photeThreeImg.src = data[2].url
             photoThreeMediaWrapper.append(photeThreeImg)
         } else {
             const photeThreeVideo = document.createElement('iframe')
+            photeThreeVideo.className = 'url'
             photeThreeVideo.src = data[2].url
             photoThreeMediaWrapper.append(photeThreeVideo)
         }
@@ -171,8 +179,8 @@ for (likeBtn of likeBtns) {
     likeBtn.textContent = '❤️';
     let likeNum = 0;
     likeBtn.addEventListener('click', (e) => {
-
-        const likeP = document.querySelector('.likeP')
+        // console.log(e.target.parentNode.children[1])
+        const likeP = e.target.parentNode.children[1]
         likeNum += 1
         if (likeNum === 1) {
             likeP.textContent = '1 like'
