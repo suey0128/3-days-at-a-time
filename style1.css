@@ -23,6 +23,7 @@
 h1 {
     padding:20px;
     color: white;
+    font-size: 50px;
 }   
 
 #h1Container h4 {
@@ -42,7 +43,8 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom:10px
+    margin-bottom:10px;
+    max-width: 1300px;
 }
 
 #datePickerContainer {
@@ -67,7 +69,7 @@ h1 {
 }
 
 #date-picker:hover {
-    cursor: pointer;
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
 }
 
 #randomBtnWrapper {
@@ -83,6 +85,10 @@ h1 {
     background:linear-gradient(to right, #c9ffbf, #ffafbd);
     color: black;
     padding: 10px 20px;
+}
+#random:hover {
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
+    cursor: pointer;
 }
 
 #photoContainer {
@@ -104,9 +110,6 @@ h1 {
     background-color: white;
 }
 
-.photoInfoContainer {
-
-}
 
 .photoMediaWrapper {
     padding: 30px;
@@ -200,13 +203,18 @@ h1 {
     background-color: white;
 }
 
-.like {
+.like1, .like2, .like3 {
     border: none;
     outline: none;
     border-radius: 4px;
     background:linear-gradient(to right, #c9ffbf, #ffafbd);
     color: #fff;
     padding: 2px 15px;
+}
+
+.like1:hover, .like2:hover, .like3:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
 }
 
 
@@ -254,6 +262,7 @@ h1 {
 
 .submitBtn:hover {
     cursor: pointer;
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
 }
 
 #commentContainer {
@@ -279,7 +288,7 @@ h1 {
 
 .comment { 
     padding: 5px 30px;
-    list-style: none;
+    list-style: square;
     color: grey;
     background:linear-gradient(to right, #c9ffbf, #ffafbd);
 }
