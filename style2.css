@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    background-color: black;
+    color:white;
+}
+#h1Container {
+    height: 170px;
+    display: flex;
+    flex-direction: column;    /* make the block verditally lie with each other */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    /* top: 0;
+    z-index: 999; */
+}
+h1 {
+    padding:20px;
+    color: white;
+    font-size: 50px;
+}
+#h1Container h4 {
+    font-size: larger;
+    background-color: #FF8177;
+    background-image: linear-gradient(to right, #C9FFBF, #FFAFBD);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+#selectionContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px;
+    max-width: 1300px;
+}
+#datePickerContainer {
+    display: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#select {
+    font-size: 20px;
+}
+#date-picker {
+    background: white;
+    color: black;
+    padding: 0px 10px;
+    outline: none;
+    border: none;
+    display: center;
+}
+#date-picker:hover {
+    background: linear-gradient(to right, #C2E59C, #64B3F4);
+}
+#randomBtnWrapper {
+    position:absolute;
+    right:550px
+}
+#random {
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background:linear-gradient(to right, #C9FFBF, #FFAFBD);
+    color: black;
+    padding: 10px 20px;
+}
+#random:hover {
+    background: linear-gradient(to right, #C2E59C, #64B3F4);
+    cursor: pointer;
+}
+#photoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding:60px 30px;
+    /* background-color: wheat; */
+}
+.photocard {
+    margin: 5px 30px 30px 30px;
+    height: 425px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease-in;
+    background-color: white;
+}
+.photoMediaWrapper {
+    padding: 30px;
+    height: 425px;
+    max-height: 452px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease-in;
+    object-fit: contain;
+    background-color: white;
+}
+.url {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.url:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+#photeOneImg:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:50px;
+    margin-top:-50px;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+#photeOneVideo:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:50px;
+    margin-top:-50px;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+#photeThreeImg:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+    margin-top:-50px;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+#photeThreeVideo:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+    margin-top:-50px;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+.likeContainer {
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.like1, .like2, .like3 {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background:linear-gradient(to right, #C9FFBF, #FFAFBD);
+    color: #fff;
+    padding: 2px 15px;
+}
+.like1:hover, .like2:hover, .like3:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #C2E59C, #64B3F4);
+}
+.likeContainer p {
+    font-size: 12px;
+}
+.photoInfoContainer h5{
+    padding: 5px 30px;
+    font-size: 14px;
+    background-color: white;
+    color:black;
+}
+.photoInfoContainer p {
+    padding: 5px 30px 10px 30px;
+    background-color: white;
+    color:black;
+}
+.lazyMsgWrapper h2 {
+    padding: 20px;
+    background-color: white;
+    color:black;
+}
+#commentForm{
+    align-items: center;
+    font-family: 'Bookman Old Style ', serif;
+}
+#commentFormContainer {
+    padding:60px;
+   text-align: center;
+}
+#LeaveComment {
+    padding:20px 0px;
+}
+.submitBtn  {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: linear-gradient(to right, #C9FFBF, #FFAFBD);
+    padding: 10px 20px;
+    text-align: left;
+}
+.submitBtn:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #C2E59C, #64B3F4);
+}
+#commentContainer {
+    padding: 30px 30px 50px 30px;
+    border: solid 25px black;
+    background: linear-gradient(to right, #C9FFBF, #FFAFBD);
+}
+#LeaveComment {
+    background-color: #FF8177;
+    background-image: linear-gradient(to right, #C9FFBF, #FFAFBD);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+#comments {
+    color: rgb(3, 2, 2);
+    background:linear-gradient(to right, #C9FFBF, #FFAFBD);
+    font-family: 'Bookman Old Style ', serif;
+}
+.comment {
+    padding: 5px 30px;
+    list-style: square;
+    color: rgb(7, 6, 6);
+    background:linear-gradient(to right, #C9FFBF, #FFAFBD);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

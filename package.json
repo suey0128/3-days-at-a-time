@@ -1,0 +1,22 @@
+{
+  "name": "phase-1-javascript-project-3daysatatime",
+  "version": "1.0.0",
+  "description": "Fake REST API for project 3DaysAtATime",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suey0128/phase-1-javascript-project-3daysatatime.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suey0128/phase-1-javascript-project-3daysatatime/issues"
+  },
+  "homepage": "https://github.com/suey0128/phase-1-javascript-project-3daysatatime#readme",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}

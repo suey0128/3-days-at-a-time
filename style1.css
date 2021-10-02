@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    background-color: black;
+    color:white;
+}
+
+#h1Container {
+    height: 170px;
+    display: flex;
+    flex-direction: column;    /* make the block verditally lie with each other */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    /* top: 0;
+    z-index: 999; */
+}
+
+h1 {
+    padding:20px;
+    color: white;
+    font-size: 50px;
+}   
+
+#h1Container h4 {
+    font-size: larger;
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #c9ffbf, #ffafbd);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+#selectionContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px;
+    max-width: 1300px;
+}
+
+#datePickerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#select {
+    font-size: 20px;
+}
+
+#date-picker {
+    margin-left:8px;
+    background: white;
+    color: black;
+    padding: 0px 10px;
+    outline: none;
+    border: none;
+}
+
+#date-picker:hover {
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
+}
+
+#randomBtnWrapper {
+    position:absolute;
+    right:50px
+}
+
+#random {
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background:linear-gradient(to right, #c9ffbf, #ffafbd);
+    color: black;
+    padding: 10px 20px;
+}
+#random:hover {
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
+    cursor: pointer;
+}
+
+#photoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding:60px 30px;
+    /* background-color: wheat; */
+}
+
+.photocard {
+    margin: 5px 30px 30px 30px;
+    height: 425px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease-in;
+    background-color: white;
+}
+
+
+.photoMediaWrapper {
+    padding: 30px;
+    height: 425px;
+    max-height: 452px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease-in;    
+    object-fit: contain;
+    background-color: white;
+}
+
+.url {
+    height: 100%; 
+    width: 100%;
+    object-fit: cover;
+}
+
+.url:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+
+#photeOneImg:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:50px;
+    margin-top:-50px;
+
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+
+#photeOneVideo:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:50px;
+    margin-top:-50px;
+
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+
+#photeThreeImg:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+    margin-top:-50px;
+
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+
+#photeThreeVideo:hover {
+    transform: scale(1.5);
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+    margin-top:-50px;
+
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+
+
+
+.likeContainer {
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.like1, .like2, .like3 {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background:linear-gradient(to right, #c9ffbf, #ffafbd);
+    color: #fff;
+    padding: 2px 15px;
+}
+
+.like1:hover, .like2:hover, .like3:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
+}
+
+
+
+.likeContainer p {
+    font-size: 12px;
+}
+.photoInfoContainer h5{
+    padding: 5px 30px;
+    font-size: 14px;
+    background-color: white;
+    color:black;
+}
+
+.photoInfoContainer p {
+    padding: 5px 30px 10px 30px;
+    background-color: white;
+    color:black;
+}
+
+.lazyMsgWrapper h2 {
+    padding: 20px;
+    background-color: white;
+    color:black;
+}
+
+
+
+#commentFormContainer {
+    padding:60px
+}
+
+#LeaveComment {
+    padding:20px 0px
+}
+
+.submitBtn  {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: linear-gradient(to right, #c9ffbf, #ffafbd);
+    color: black;
+    padding: 10px 20px;
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
+}
+
+#commentContainer {
+    padding: 30px 30px 50px 30px;
+    background: linear-gradient(to right, #c9ffbf, #ffafbd);
+
+}
+
+#LeaveComment {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #c9ffbf, #ffafbd);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+#comments {
+    color: grey;
+    padding: 5px 40px;
+    background:linear-gradient(to right, #c9ffbf, #ffafbd);
+}
+
+.comment { 
+    padding: 5px 10px;
+    list-style: square;
+    color: grey;
+    background:linear-gradient(to right, #c9ffbf, #ffafbd);
+}
+

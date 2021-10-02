@@ -1,49 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="style.css">
-        <script defer src="./index.js"></script> 
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <script defer src="./index.js"></script>  -->
+        <script defer src="./stretchgoal2.js"></script> 
         <title>3 Days at a Time</title>
     </head>
 
     <body>
         <div id="h1Container">
             <h1>3 DAYS AT A TIME</h1>
+            <h4 id="description">We feature the NASA photo of the day, 3 days at a time!</h4>
         </div>
 
         <div id="selectionContainer">
-            <h4 id="description">We feature the NASA photo of the day, 3 days at a time!</h4>
-            <p id="select">select your 3 days starting from</p>
-            <input type = "date" name="date" id="date-picker" >
+            <div id="datePickerContainer">
+                <p id="select">select your 3 days starting from</p>
+                <input type = "date" name="date" id="date-picker" >
+            </div>
+            <div id="randomBtnWrapper">
+                <button id="random">Can't Decide</button>
+            </div>
         </div>
-        
+
+
         <div id="photoContainer">
             <div id="photoOneCard" class="photocard">
-                <img id="photoOneImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AS17-137-20979_1024.jpg" alt="2021-05-29">
-                <h5 id="photoOneTitle" class="title">Lunar Dust and Duct Tape</h5>
-                <p id="photoOneDate" class="date">2021-05-29</p>
-                <button class="like">Like ❤ </button>
+                <lazyMsgWrapper id="lazyMsgWrapperOne" class="lazyMsgWrapper">
+                    <h2 id="lazyMsgOne" >Opps! It seems like NASA was being lazy on the 1st day :/</h2>
+                </lazyMsgWrapper>
+                <div id="photoOneInfoContainer" class="photoInfoContainer">
+                    <div id="photoOneMediaWrapper" class="photoMediaWrapper">
+                        <img id="photoOneImg" class="url" src="" alt="">
+                        <!-- <iframe id="photoOneVideo" class="url" src="" frameborder="0"></iframe> -->
+                    </div>
+                    <div class="likeContainer">
+                        <button class="like1">Like ♡</button>
+                        <p class="likeP"></p>
+                    </div>
+                    <h5 id="photoOneTitle" class="title">Lunar Dust and Duct Tape</h5>
+                    <p id="photoOneDate" class="date">2021-05-29</p>
+                </div>
             </div>
+
             <div id="photoTwoCard" class="photocard">
-                <img id="photoTwoImg" class="url" src="https://apod.nasa.gov/apod/image/2105/AuroraClouds_Boffelli_1080.jpg" alt="2021-05-30">
-                <h5 id="photoTwoTitle" class="title">Aurora over Clouds</h5>
-                <p id="photoTwoDate" class="date">2021-05-30</p>
-                <button class="like">Like ❤ </button>
+                <lazyMsgWrapper  id="lazyMsgWrapperTwo" class="lazyMsgWrapper">
+                    <h2 id="lazyMsgTwo" >Opps! It seems like NASA was being lazy on the 2nd day :/</h2>
+                </lazyMsgWrapper>
+                <div id="photoTwoInfoContainer" class="photoInfoContainer">
+                    <div id="photoTwoMediaWrapper" class="photoMediaWrapper">
+                        <img id="photoTwoImg" class="url" src="" alt="">
+                        <!-- <iframe id="photoTwoVideo" class="url" src="" frameborder="0"></iframe> -->
+                    </div>
+                    <div class="likeContainer">
+                        <button class="like2">Like ♡</button>
+                        <p class="likeP"></p>
+                    </div>
+                    <h5 id="photoTwoTitle" class="title">Aurora over Clouds</h5>
+                    <p id="photoTwoDate" class="date">2021-05-30</p>
+                </div>
             </div>
+
             <div id="photoThreeCard" class="photocard">
-                <img id="photoThreeImg" class="url" src="https://apod.nasa.gov/apod/image/2105/Mimas_Cassini_960.jpg" alt="2021-05-31">
-                <h5 id="photoThreeTitle" class="title">Mimas: Small Moon with a Big Crater</h5>
-                <p id="photoThreeDate" class="date">2021-05-31</p>
-                <button class="like">Like ❤ </button>
+                <lazyMsgWrapper id="lazyMsgWrapperThree" class="lazyMsgWrapper">
+                    <h2 id="lazyMsgThree" >Opps! It seems like NASA was being lazy on the 3rd day :/</h2>
+                </lazyMsgWrapper>
+                <div id="photoThreeInfoContainer" class="photoInfoContainer">
+                    <div id="photoThreeMediaWrapper" class="photoMediaWrapper">
+                        <img id="photoThreeImg" class="url" src="" alt="">
+                        <!-- <iframe id="photoTwoVideo" class="url" src="" frameborder="0"></iframe> -->
+                    </div>
+                    <div class="likeContainer">
+                        <button class="like3">Like ♡</button>
+                        <p class="likeP"></p>
+                    </div>
+                    <h5 id="photoThreeTitle" class="title">Mimas: Small Moon with a Big Crater</h5>
+                    <p id="photoThreeDate" class="date">2021-05-31</p>
+                </div>
             </div>
         </div>
 
         <div id="commentFormContainer">
             <h3 id="LeaveComment">Leave a Comment</h3>
-            <form action="">
-                <textarea id="commentBox" name="commentBox" rows="5" cols="150">Share your Thoughts here...</textarea>
+            <form id="commentForm" action="">
+                <textarea id="commentBox" name="commentBox" rows="5" cols="150" placeholder="Share your Thoughts here..."></textarea>
                 <br><br>
-                <input type="submit" value="Submit">
+                <button class="submitBtn" type="submit" value="Submit">Submit</button>
+                <!-- <input type="submit" value="Submit"> -->
             </form>
         </div>
 
@@ -54,6 +102,7 @@
                 <li class="comment">NASA NASA NASA!</li>
             </ul>
         </div>
+
 
     </body>
 </html> 
